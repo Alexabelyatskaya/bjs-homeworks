@@ -1,5 +1,7 @@
 'use strict'
 
+// Задание 1
+
 function getResult(a,b,c){
 
 	let discriminant = Math.pow(b,2) - (4 * a * c);
@@ -16,34 +18,30 @@ function getResult(a,b,c){
 		decision = [x];
 	}
 
-	else if (discriminant < 0) {
-		decision = [];
-	}
-
 	return decision;
 }
 
+// Задание 2
 
 
 function getAverageMark(marks){
 
     let summ = 0;
     let array1 = marks.slice(0, 5);
-    let average = 0;
 
- if (marks.length == 0) {
-    	return average;
+    if (marks.length == 0) {
+    	return 0;
     } 
 
-    else {
-    	for (var i = 0; i < array1.length; i++) {
-		summ = array1[i] + summ;
-	}
+    for (var i = 0; i < array1.length; i++) {
+	    summ = array1[i] + summ;
+	
+    } 
 
-    average = summ / array1.length;
-	return average;
-    }
+	return summ / array1.length;
 }
+
+// Задание 3
 
 function getAge(year) {
 
@@ -53,8 +51,8 @@ function getAge(year) {
 function askDrink(name,dateOfBirthday){
 
     if (getAge(dateOfBirthday) < 18) {
-        return text = 'Сожалею, ' + name +', но я не могу вам продать алкоголь. Зато могу предложить вам замечательный клюквенный компот!';
+        return ('Сожалею, ' + name +', но я не могу вам продать алкоголь. Зато могу предложить вам замечательный клюквенный компот!');
     } else {
-    	return text = 'Не желаете ли олд-фэшн, ' + name + '?';
+    	return ('Не желаете ли олд-фэшн, ' + name + '?');
     }
 }
